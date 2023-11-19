@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    font-size: 30px;
+}
+.container {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas: 
+    "a a a a a a a a a a a a"
+    "b b b b b b b b c c c c"
+    "b b b b b b b b c c c c"
+    ;
+}
+[class ^= "box-"] {
+    display: grid;
+    place-items: center;
+    border: 3px solid red;
+}
+.box-1 {
+    grid-area: a;
+}
+.box-2 {
+    grid-area: b;
+}
+.box-3 {
+    grid-area: c;
+}
+@media screen and (max-width:500px) {
+    .container {
+        grid-template-areas: 
+        "a a a a a a a a a a a a"
+        "b b b b b b b b b b b b"
+        "b b b b b b b b b b b b"
+        "c c c c c c c c c c c c"
+        ; 
+    }
+}

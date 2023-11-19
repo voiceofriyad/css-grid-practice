@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {    
+    columns: 4;
+    margin: 10px 10px;
+}
+img {
+    max-width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 740px) {
+    .container {
+        columns: 2;
+    }
+}
